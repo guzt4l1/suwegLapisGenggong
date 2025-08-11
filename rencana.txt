@@ -1,0 +1,29 @@
+                 [ Pengunjung Portfolio ]
+                          │
+                          ▼
+                 ┌───────────────────┐
+                 │  Portfolio Utama  │  ← React/HTML/CSS/JS
+                 │  (Vercel / Netlify)│
+                 └───────────────────┘
+                          │
+      ┌───────────────────┼───────────────────┐
+      ▼                   ▼                   ▼
+┌───────────────┐   ┌───────────────┐   ┌────────────────┐
+│  Static Site  │   │ Node.js API   │   │  WordPress Demo │
+│ (GitHub Pages)│   │ (Render/Railway) │   │(000webhost)   │
+└───────────────┘   └───────────────┘   └────────────────┘
+      │                   │                   │
+      ▼                   ▼                   ▼
+   HTML/CSS/JS        Express/DB kecil     PHP + MySQL
+   pure build         (server 24/7)        hosting gratis
+
+3️⃣ Strategi Aman Biar Tidak Cepat Habis Jatah
+Optimasi gambar → simpan di layanan gratis seperti Cloudinary atau Imgur.
+
+Gunakan caching → untuk API Node.js, cache response statis.
+
+Buat WordPress dalam versi demo ringan (nonaktifkan plugin berat).
+
+Bagi traffic → taruh beberapa project di GitHub Pages supaya beban Vercel/Netlify nggak terlalu besar.
+
+Gunakan link preview (misal video YouTube) untuk project yang resource-nya berat, sehingga orang hanya akses full site kalau mau lihat detail.
