@@ -10,26 +10,26 @@ document.addEventListener("alpine:init", () => {
   Alpine.data("offlineProduct", () => ({
     items: [
       // ==== Best Chocolate ====
-      { id: 1, name: "Chocolate Original", category: "Best Chocolate", priceBesar: 33000, priceKecil: 23000, img: "suweg.jpg" },
-      { id: 2, name: "Chocolate Cheese", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
-      { id: 3, name: "C. Chococrunch", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
-      { id: 4, name: "Chocolate Greentea", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
-      { id: 5, name: "Chocolate Tiramissu", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
-      { id: 6, name: "C. Milkcrunch", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
+      { id: 1, name: "Chocolate Original", category: "Best Chocolate", priceBesar: 33000, priceKecil: 23000, img: "chocolate-chococrunch.jpg" },
+      { id: 2, name: "Chocolate Cheese", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "chocolate-chococrunch.jpg" },
+      { id: 3, name: "C. Chococrunch", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "chocolate-chococrunch.jpg" },
+      { id: 4, name: "Chocolate Greentea", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "chocolate-chococrunch.jpg" },
+      { id: 5, name: "Chocolate Tiramissu", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "chocolate-chococrunch.jpg" },
+      { id: 6, name: "C. Milkcrunch", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "chocolate-chococrunch.jpg" },
 
       // ==== Best Pandan ====
-      { id: 7, name: "C. Pandan Original", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
-      { id: 8, name: "C. Pandan Cheese", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
-      { id: 9, name: "C. Pandan Crunch", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
-      { id: 10, name: "C. Pandan Greentea", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
-      { id: 11, name: "C. Pandan Tiramissu", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
-      { id: 12, name: "C. Pandan Milk", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "suweg.jpg" },
+      { id: 7, name: "C. Pandan Original", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
+      { id: 8, name: "C. Pandan Cheese", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
+      { id: 9, name: "C. Pandan Crunch", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
+      { id: 10, name: "C. Pandan Greentea", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
+      { id: 11, name: "C. Pandan Tiramissu", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
+      { id: 12, name: "C. Pandan Milk", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
 
       // ==== Best Redvelvet ====
-      { id: 13, name: "Redvelvet Cheese", category: "Best Redvelvet", priceBesar: 37000, priceKecil: 27000, img: "suweg.jpg" },
-      { id: 14, name: "Redvelvet Tiramissu", category: "Best Redvelvet", priceBesar: 37000, priceKecil: 27000, img: "suweg.jpg" },
-      { id: 15, name: "Redvelvet Crunch", category: "Best Redvelvet", priceBesar: 37000, priceKecil: 27000, img: "suweg.jpg" },
-      { id: 16, name: "Redvelvet Green Tea", category: "Best Redvelvet", priceBesar: 37000, priceKecil: 27000, img: "suweg.jpg" },
+      { id: 13, name: "Redvelvet Cheese", category: "Best Redvelvet", priceBesar: 37000, priceKecil: 27000, img: "c-redvelvet.jpg" },
+      { id: 14, name: "Redvelvet Tiramissu", category: "Best Redvelvet", priceBesar: 37000, priceKecil: 27000, img: "c-redvelvet.jpg" },
+      { id: 15, name: "Redvelvet Crunch", category: "Best Redvelvet", priceBesar: 37000, priceKecil: 27000, img: "c-redvelvet.jpg" },
+      { id: 16, name: "Redvelvet Green Tea", category: "Best Redvelvet", priceBesar: 37000, priceKecil: 27000, img: "c-redvelvet.jpg" },
     ],groupedItems: [],
   groupItems() {
     const map = {};
