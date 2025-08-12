@@ -18,12 +18,12 @@ document.addEventListener("alpine:init", () => {
       { id: 6, name: "C. Milkcrunch", category: "Best Chocolate", priceBesar: 35000, priceKecil: 25000, img: "chocolate-chococrunch.jpg" },
 
       // ==== Best Pandan ====
-      { id: 7, name: "C. Pandan Original", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
-      { id: 8, name: "C. Pandan Cheese", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
-      { id: 9, name: "C. Pandan Crunch", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
-      { id: 10, name: "C. Pandan Greentea", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
-      { id: 11, name: "C. Pandan Tiramissu", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
-      { id: 12, name: "C. Pandan Milk", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "c-pandan.jpg" },
+      { id: 7, name: "C. Pandan Original", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "pandan-cheese.jpg" },
+      { id: 8, name: "C. Pandan Cheese", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "pandan-cheese.jpg" },
+      { id: 9, name: "C. Pandan Crunch", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "pandan-cheese.jpg" },
+      { id: 10, name: "C. Pandan Greentea", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "pandan-cheese.jpg" },
+      { id: 11, name: "C. Pandan Tiramissu", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "pandan-cheese.jpg" },
+      { id: 12, name: "C. Pandan Milk", category: "Best Pandan", priceBesar: 35000, priceKecil: 25000, img: "pandan-cheese.jpg" },
 
       // ==== Best Redvelvet ====
       { id: 13, name: "Redvelvet Cheese", category: "Best Redvelvet", priceBesar: 37000, priceKecil: 27000, img: "c-redvelvet.jpg" },
@@ -88,15 +88,16 @@ document.addEventListener("alpine:init", () => {
     },
     chekout() {
       const pesanan = this.items.map(
-        (item) => `- ${item.name} x${item.qty} @${rupiah(item.price)}`
+        (item) => `- ${item.name} x${item.qty} ${rupiah(item.price)}`
       );
       const totalHarga = `Total: ${rupiah(this.total)}`;
       const url =
-        "https://api.whatsapp.com/send?phone=6282336199884&text=Pesanan%20Anda%0A" +
+        "https://api.whatsapp.com/send?phone=6282228773372&text=*Pesanan%20Anda*%0A" +
+        encodeURIComponent(
         pesanan.join("\n") +
         "\n\n" +
         totalHarga +
-        "%0AAtas%20Nama:%20[Nama%20Anda]";
+        "\nAtas Nama: ");
       window.open(url);
     },
   });
