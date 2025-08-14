@@ -51,14 +51,11 @@ window.onclick = (e) => {
 };
 function sendMasage() {
   const name = document.getElementById("nama").value;
-  const email = document.getElementById("email").value;
   const pesan = document.getElementById("pesan").value;
 
   const url =
-    "https://api.whatsapp.com/send?phone=6282331540799&text=nama%20%3A%20" +
+    "https://api.whatsapp.com/send?phone=6285233520209&text=nama%20%3A%20" +
     name +
-    "%0Aemail%20%3A%20" +
-    email +
     "%0Apesan%20%3A%20" +
     pesan +
     ".";

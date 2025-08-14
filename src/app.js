@@ -92,7 +92,7 @@ document.addEventListener("alpine:init", () => {
       );
       const totalHarga = `Total: ${rupiah(this.total)}`;
       const url =
-        "https://api.whatsapp.com/send?phone=6282228773372&text=*Pesanan%20Anda*%0A" +
+        "https://api.whatsapp.com/send?phone=6285233520209&text=*Pesanan%20Anda*%0A" +
         encodeURIComponent(
         pesanan.join("\n") +
         "\n\n" +

@@ -1,5 +1,5 @@
 :root {
-  --primary: #c0476fff; 
+  --primary: #ffae00; 
   --box: #992c47ff;     
   --bg: #912323ff;     
 }
@@ -259,24 +259,37 @@ body {
   flex-direction: column;
   gap: 8px;
 }
+/* Rata kanan untuk teks dan tombol di item1 */
+.best-seller-item.item1 .best-seller-text {
+  display: flex;
+  flex-direction: column;
+  text-align: right; /* Rata kanan teks */
+  align-items: flex-end; /* Rata kanan tombol */
+}
+
+.best-seller-item.item1 .best-seller-text .btn-secondary {
+  display: inline-block; /* supaya tetap ikut align */
+}
 
 .best-seller-text h4 {
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   font-weight: 600;
 }
 
 .best-seller-text .btn-secondary {
-  background-color: #ffae00;
+  background-color: var(--primary);
+  font-size: 1.3rem;
   color: white;
   padding: 6px 14px;
   border-radius: 6px;
   text-decoration: none;
+  width: fit-content;
   font-weight: bold;
 }
 
 .best-seller-img-wrapper {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   animation: float 4s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
@@ -287,23 +300,41 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
+.jam-buka {
+  text-align: center;
+  padding: 4rem 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+.jam-subtitle {
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  color: #ffffffff;
+}
+.jam-waktu {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+}
+.jam-waktu span {
+  color: var(--primary);
+}
+.jam-hari {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
 /* About Section */
 .about,
 .menu,
 .products,
 .contact,
-.best-seller,
-.jam-buka {
+.best-seller {
   padding: 6rem 5% 1.4rem;
 }
 
-.about h2,
 .menu h2,
 .products h2,
 .contact h2,
-.best-seller h2,
-.jam-buka h2 {
+.best-seller h2{
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
@@ -313,8 +344,7 @@ body {
 .menu h2 span,
 .products h2 span,
 .contact h2 span,
-.best-seller h2 span,
-.jam-buka h2 span {
+.best-seller h2 span {
   color: var(--primary);
 }
 
@@ -340,19 +370,21 @@ body {
   margin-bottom: 10px;
 }
 
-.faq {
-  margin-top: 40px;
+.faq h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
 }
-
-.faq h3 {
-  font-size: 1.8rem;
+.faq h1 span {
   color: var(--primary);
+  font-size: 3.5rem;
 }
-
 /* Bagian FAQ */
 .faq-item {
   margin-bottom: 20px;
-  background-color: var(--box);
+  width: 100%;
+  background-color: #00000085;
   padding: 10px;
   border-radius: 8px;
 }
@@ -381,6 +413,111 @@ body {
 
 .faq-question:hover {
   color: var(--bg);
+}
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 6rem 5% 1.4rem;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 2rem;
+}
+.about h2{
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+/* Card umum */
+.about-block {
+  background: #ffffff17;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Block 1: Logo + Visi */
+.logo-visi .about-logo {
+  max-width: 140px;
+  margin-bottom: 1.2rem;
+}
+
+.big-text {
+  font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Block 2: Misi */
+
+.misi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.misi-list li {
+  font-size: clamp(1yyrem, 1.2vw, 1.15rem);
+  display: flex;
+  align-items: flex-start;
+  text-align : left;
+  gap: 0.5rem;
+}
+
+.misi-list li i {
+  flex-shrink: 0;
+  color: var(--primary);
+  transition: color 0.25s ease;
+}
+
+.misi-list li:hover i {
+  color: #ff7a59; /* efek hover aksen kedua */
+}
+
+/* --- 3) Perbaikan kecil lain yang sering bikin tampilan "aneh" --- */
+/* about-block default center; biarkan, tapi misi kita override di atas */
+.about-block { 
+  text-align: center; 
+}
+
+/* Pastikan foto benar2 terlihat penuh tanpa crop */
+.photos img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;        /* tampil utuh */
+  border-radius: 12px;
+  background: #ffffff17;
+  box-shadow: 0 2px 6px rgba(0,0,0,.19); /* sebelumnya tertulis 'shadow:' */
+  padding: 8px;
+  margin-bottom: 1rem;
+  transition: transform .3s ease;
+}
+.photos img:hover { transform: scale(1.03); }
+
+/* Jika kamu punya 2 rasio berbeda (1:1 & 4:3) dan ingin tinggi seragam: */
+/* Bungkus tiap <img> dgn <div class="photo-aspect sqr|rect"> lalu: */
+.photo-aspect { position: relative; overflow: hidden; border-radius: 10px; }
+.photo-aspect.sqr  { aspect-ratio: 1 / 1; }
+.photo-aspect.rect { aspect-ratio: 4 / 3; }
+.photo-aspect img  { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+
+/* Responsif */
+@media (max-width: 768px) {
+  .photos {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Menu Section */
@@ -577,6 +714,14 @@ footer .credit {
 footer .credit a {
   color: var(--primary);
   font-weight: 700;
+}
+footer .icon-tiktok span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor; /* ikut color dari a */
+  -webkit-mask: url("https://cdn.simpleicons.org/tiktok") no-repeat center / contain;
+          mask: url("https://cdn.simpleicons.org/tiktok") no-repeat center / contain;
 }
 
 /* Media Queries */
